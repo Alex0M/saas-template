@@ -2,7 +2,7 @@ node {
   //
   def pullRequest = false
   //
-  git url: "https://github.com/secourse/template.git"
+  git url: "https://github.com/soft-eng-course/template.git"
   sh '''git submodule init'''
   sh '''git submodule update'''
   if (params.containsKey('sha1')){
