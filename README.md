@@ -1,1 +1,1 @@
-# template
+# Software Engineering Course project template
