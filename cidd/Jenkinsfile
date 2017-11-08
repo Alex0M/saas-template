@@ -34,9 +34,9 @@ node {
     def scannerHome = tool 'SonarQube Scanner 3.0.3';
     withSonarQubeEnv('SonarQube') {
       if (pullRequest){
-        sh '''${scannerHome}/bin/sonar-scanner -Dsonar.analysis.mode=preview -Dsonar.github.pullRequest=${ghprbPullId} -Dsonar.github.repository="${org}/${repo}" -Dsonar.github.oauth=${GITHUB_ACCESS_TOKEN} -Dsonar.login=${SONARQUBE_ACCESS_TOKEN}'''
+        sh "${scannerHome}/bin/sonar-scanner -Dsonar.analysis.mode=preview -Dsonar.github.pullRequest=${ghprbPullId} -Dsonar.github.repository='${org}/${repo}' -Dsonar.github.oauth=${GITHUB_ACCESS_TOKEN} -Dsonar.login=${SONARQUBE_ACCESS_TOKEN}"
       } else {
-        sh '''${scannerHome}/bin/sonar-scanner'''
+        sh "${scannerHome}/bin/sonar-scanner"
       }
     }
   }
