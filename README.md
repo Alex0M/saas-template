@@ -9,5 +9,5 @@
   ```
   * Run http://<host>:8080 and complete Jenkins installation
   * Install SonarQube using sonarqube/README.md
-  * Install Nexus ???
+  * Install Nexus
   * Configure Jenkins using jenkins/README.md

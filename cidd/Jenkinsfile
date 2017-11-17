@@ -41,7 +41,10 @@ node {
     }
   }
   stage('Deploy & Publish') {
-    //sh './service-deploy.sh'
+    if (pullRequest){
+    } else {
+      sh './upload.sh'
+    }
     //archiveArtifacts artifacts: 'mobile/platforms/android/build/outputs/apk/*.apk'
   }
   stage('Cleanup') {
