@@ -1,4 +1,6 @@
 # Software Engineering Course project template
+
+
 * Clone https://github.com/swe-course/content.git with helpers
 * Execute
   ```
